@@ -8,6 +8,7 @@
 import Foundation
 
 enum ProductionYear: String {
+    case year = "Select year"
     case year2015 = "2015"
     case year2016 = "2016"
     case year2017 = "2017"
@@ -20,6 +21,8 @@ enum ProductionYear: String {
     
     var price: Int {
         switch self {
+        case .year:
+            return 0
         case .year2015:
             return 0
         case .year2016:

@@ -13,9 +13,12 @@ enum Brand {
     case mazda
     case mercedesBenz
     case volkswagen
+    case brandType
     
     var title: String {
         switch self {
+        case .brandType:
+            return "Select brand"
         case .audi:
             return "Audi"
         case .bmw:
@@ -40,6 +43,8 @@ enum Brand {
             return 800
         case .volkswagen:
             return 600
+        case .brandType:
+            return 0
         }
     }
 }

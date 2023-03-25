@@ -8,6 +8,7 @@
 import Foundation
 
 enum TypeCar {
+    case type
     case sedan
     case coupe
     case stationWagon
@@ -15,12 +16,14 @@ enum TypeCar {
     
     var title: String {
         switch self {
+        case .type:
+            return "Select type"
         case .sedan:
             return "Sedan"
         case .coupe:
             return "Coupe"
         case .stationWagon:
-            return "StationWagon"
+            return "Station wagon"
         case .minivan:
             return "Minivan"
         }
@@ -35,6 +38,8 @@ enum TypeCar {
             return 300
         case .minivan:
             return 80
+        case .type:
+            return 0 
         }
     }
 }

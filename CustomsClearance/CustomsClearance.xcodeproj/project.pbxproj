@@ -14,7 +14,7 @@
 		5E679ACB29CE023900CC7C69 /* CountriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E679ACA29CE023900CC7C69 /* CountriesModels.swift */; };
 		5E7F725229C8EE8800D93F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F725129C8EE8800D93F38 /* AppDelegate.swift */; };
 		5E7F725429C8EE8800D93F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F725329C8EE8800D93F38 /* SceneDelegate.swift */; };
-		5E7F725629C8EE8800D93F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F725529C8EE8800D93F38 /* ViewController.swift */; };
+		5E7F725629C8EE8800D93F38 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F725529C8EE8800D93F38 /* CalculateViewController.swift */; };
 		5E7F725929C8EE8800D93F38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F725729C8EE8800D93F38 /* Main.storyboard */; };
 		5E7F725B29C8EE8B00D93F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F725A29C8EE8A00D93F38 /* Assets.xcassets */; };
 		5E7F725E29C8EE8B00D93F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F725C29C8EE8B00D93F38 /* LaunchScreen.storyboard */; };
@@ -31,7 +31,7 @@
 		5E7F724E29C8EE8800D93F38 /* CustomsClearance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomsClearance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7F725129C8EE8800D93F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7F725329C8EE8800D93F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5E7F725529C8EE8800D93F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E7F725529C8EE8800D93F38 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		5E7F725829C8EE8800D93F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E7F725A29C8EE8A00D93F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7F725D29C8EE8B00D93F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 				5EEC2B1929CC7B830086726B /* Podfile */,
 				5EEC2B1B29CC7CA20086726B /* Application */,
 				5E679AC129CDF85E00CC7C69 /* Models */,
-				5EEC2B1D29CC7CC20086726B /* Controllers */,
 				5EEC2B1C29CC7CB40086726B /* Views */,
+				5EEC2B1D29CC7CC20086726B /* Controllers */,
 				5EEC2B1E29CC7CD10086726B /* DefaultFiles */,
 			);
 			path = CustomsClearance;
@@ -134,7 +134,7 @@
 		5EEC2B1D29CC7CC20086726B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5E7F725529C8EE8800D93F38 /* ViewController.swift */,
+				5E7F725529C8EE8800D93F38 /* CalculateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,12 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E7F726229C8EE8B00D93F38 /* Build configuration list for PBXNativeTarget "CustomsClearance" */;
 			buildPhases = (
-				5E7C76DE29CC851300F40AFA /* ShellScript */,
 				9C8408EED34D0DD8AB3F74E2 /* [CP] Check Pods Manifest.lock */,
+				5E7C76DE29CC851300F40AFA /* ShellScript */,
 				5E7F724A29C8EE8800D93F38 /* Sources */,
 				5E7F724B29C8EE8800D93F38 /* Frameworks */,
 				5E7F724C29C8EE8800D93F38 /* Resources */,
-				B64B823BCA60F5E347D9657A /* [CP] Embed Pods Frameworks */,
+				E23DA6B280AE29E4006AC6A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,7 +260,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B64B823BCA60F5E347D9657A /* [CP] Embed Pods Frameworks */ = {
+		E23DA6B280AE29E4006AC6A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +286,7 @@
 			files = (
 				5E679ACB29CE023900CC7C69 /* CountriesModels.swift in Sources */,
 				5E679AC929CDF8B400CC7C69 /* FuelModels.swift in Sources */,
-				5E7F725629C8EE8800D93F38 /* ViewController.swift in Sources */,
+				5E7F725629C8EE8800D93F38 /* CalculateViewController.swift in Sources */,
 				5E679AC729CDF8A500CC7C69 /* ProductionYearsModels.swift in Sources */,
 				5E679AC329CDF87C00CC7C69 /* TypeCarModels.swift in Sources */,
 				5E7F725229C8EE8800D93F38 /* AppDelegate.swift in Sources */,

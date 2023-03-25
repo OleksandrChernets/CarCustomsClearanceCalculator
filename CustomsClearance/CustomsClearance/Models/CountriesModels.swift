@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum Country {
-    case ukraine
-    case usa
+enum Country: Int {
+    case ukraine = 0
+    case usa = 1
     
     var title: String {
         switch self {
         case .ukraine:
-            return "Ukraine"
+            return "🇺🇦"
         case .usa:
-            return "USA"
+            return "🇺🇸"
         }
     }
     var coefficient: Double {

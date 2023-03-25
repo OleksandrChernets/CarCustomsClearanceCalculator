@@ -12,6 +12,7 @@ enum FuelType {
     case diesel
     case gas
     case electro
+    case fuelType
     
     var title: String {
         switch self {
@@ -23,6 +24,8 @@ enum FuelType {
             return "Gas"
         case .electro:
             return "Electro"
+        case .fuelType:
+            return "Select fuel"
         }
     }
     var price: Int {
@@ -35,6 +38,8 @@ enum FuelType {
             return 150
         case .electro:
             return 500
+        case .fuelType:
+            return 0
         }
     }
 }
