@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Good but not perfect decision for `type in all enums`
+
 enum TypeCar {
     case type
     case sedan

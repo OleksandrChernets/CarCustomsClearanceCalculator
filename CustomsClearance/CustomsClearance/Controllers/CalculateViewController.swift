@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Make all non hierarchical classes as final
 class CalculateViewController: UIViewController {
     
     // MARK: @IBOutlets
@@ -26,6 +27,10 @@ class CalculateViewController: UIViewController {
     private var brandPickerView = UIPickerView()
     private var productionYearsPickerView = UIPickerView()
     private var fuelPickerView = UIPickerView()
+    
+    // You can short that with explicit type for arrays or case iterrable
+    // private var types: [TypeCar] = [.type, .sedan, .coupe, .stationWagon, .minivan]
+    // private var types = TypeCar.allCases
     private var types = [TypeCar.type,TypeCar.sedan, TypeCar.coupe, TypeCar.stationWagon, TypeCar.minivan]
     private var brands = [Brand.brandType, Brand.audi, Brand.bmw, Brand.mazda, Brand.mercedesBenz, Brand.volkswagen]
     private var fuels = [FuelType.fuelType, FuelType.diesel, FuelType.petrol, FuelType.gas, FuelType.electro]
@@ -53,6 +58,7 @@ class CalculateViewController: UIViewController {
               (productionYearsPickerView.selectedRow(inComponent: 0) != 0),
               (fuelPickerView.selectedRow(inComponent: 0) != 0)
         else {
+            // Localization missing
             let alert = UIAlertController(title: "Error", message: "Please select all fields", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -65,6 +71,8 @@ class CalculateViewController: UIViewController {
         let fuelsPrice = fuels[fuelPickerView.selectedRow(inComponent: 0)].price
         
         guard let selectCountry = Country(rawValue: segmentControl.selectedSegmentIndex) else { return }
+        // Better to change it to single logic if it is totally the same
+        
         switch selectCountry {
         case .ukraine:
             let result = Double(typesPrice + brandsPrice + productionYearsPrice + fuelsPrice) * Country.ukraine.coefficient
@@ -92,7 +100,7 @@ class CalculateViewController: UIViewController {
         pickerSelectBy(row: 0)
         pickerViewSelectRow()
         priceLabel.text = "0.0"
-    }
+    }// need spacing
     public func configureSegmentControl() {
         segmentControl.removeAllSegments()
         segmentControl.insertSegment(withTitle: Country.ukraine.title, at: 0, animated: false)
@@ -100,7 +108,7 @@ class CalculateViewController: UIViewController {
         segmentControl.selectedSegmentIndex = 0
         segmentControl.layer.cornerRadius = 15
     }
-    
+    // Some of fucntions are public - why?
     public func configureTextFields() {
         typePickerView.delegate = self
         typePickerView.dataSource = self
@@ -129,13 +137,13 @@ class CalculateViewController: UIViewController {
         brandTextField.text = brands[row].title
         productionYearsTextField.text = productionYears[row].rawValue
         fuelTextField.text = fuels[row].title
-    }
+    }// need spacing
     public func pickerViewSelectRow() {
         let pickers = [typePickerView, brandPickerView, productionYearsPickerView, fuelPickerView]
         for picker in pickers {
             picker.selectRow(0, inComponent: 0, animated: true)
         }
-    }
+    }// need spacing
     func configurePickerViewColor() {
         typePickerView.backgroundColor = typeTextField.backgroundColor
         brandPickerView.backgroundColor = typeTextField.backgroundColor
@@ -152,6 +160,7 @@ class CalculateViewController: UIViewController {
 // MARK: UIPickerViewDelegate & UIPickerViewDataSource
 
 extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    // need spacing
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
