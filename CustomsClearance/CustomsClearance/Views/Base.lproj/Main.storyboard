@@ -195,10 +195,10 @@
                         <outlet property="brandTextField" destination="rVn-VG-b3P" id="qbs-mh-0rL"/>
                         <outlet property="calculateButton" destination="Z8D-gV-Gtp" id="Fnu-pw-N3L"/>
                         <outlet property="clearButton" destination="mTZ-Ab-s7Y" id="tGg-FX-3wo"/>
+                        <outlet property="countrySegmentControl" destination="kSh-wa-j4z" id="Ahk-Iq-1eA"/>
                         <outlet property="fuelTextField" destination="05T-hu-5qL" id="kjn-8X-bSf"/>
                         <outlet property="priceLabel" destination="ehc-iE-JBK" id="Wue-qo-rBb"/>
                         <outlet property="productionYearsTextField" destination="Wt0-8N-tB0" id="t4c-wM-WWv"/>
-                        <outlet property="segmentControl" destination="kSh-wa-j4z" id="Ahk-Iq-1eA"/>
                         <outlet property="typeTextField" destination="HGr-GU-S3S" id="6da-OG-rzM"/>
                     </connections>
                 </viewController>

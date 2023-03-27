@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TypeCar {
+enum TypeCar: CaseIterable {
     case type
     case sedan
     case coupe

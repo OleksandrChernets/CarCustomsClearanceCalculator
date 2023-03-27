@@ -7,11 +7,10 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController {
+final class CalculateViewController: UIViewController {
     
     // MARK: @IBOutlets
-    
-    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var countrySegmentControl: UISegmentedControl!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var brandTextField: UITextField!
     @IBOutlet weak var productionYearsTextField: UITextField!
@@ -21,22 +20,16 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
     
     // MARK: Properties
-    
     private var typePickerView = UIPickerView()
     private var brandPickerView = UIPickerView()
     private var productionYearsPickerView = UIPickerView()
     private var fuelPickerView = UIPickerView()
-    private var types = [TypeCar.type,TypeCar.sedan, TypeCar.coupe, TypeCar.stationWagon, TypeCar.minivan]
-    private var brands = [Brand.brandType, Brand.audi, Brand.bmw, Brand.mazda, Brand.mercedesBenz, Brand.volkswagen]
-    private var fuels = [FuelType.fuelType, FuelType.diesel, FuelType.petrol, FuelType.gas, FuelType.electro]
-    private var productionYears = [ProductionYear.year, ProductionYear.year2015,
-                                   ProductionYear.year2016, ProductionYear.year2017,
-                                   ProductionYear.year2018, ProductionYear.year2019,
-                                   ProductionYear.year2020, ProductionYear.year2021,
-                                   ProductionYear.year2022, ProductionYear.year2023]
+    private var types = TypeCar.allCases
+    private var brands = Brand.allCases
+    private var fuels = FuelType.allCases
+    private var productionYears = ProductionYear.allCases
     
     // MARK: Lifecycle methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
@@ -45,7 +38,6 @@ class CalculateViewController: UIViewController {
     }
     
     // MARK: @IBActions
-    
     @IBAction func calculateButtonPressed(_ sender: Any) {
         
         guard (typePickerView.selectedRow(inComponent: 0) != 0),
@@ -64,15 +56,10 @@ class CalculateViewController: UIViewController {
         let productionYearsPrice = productionYears[productionYearsPickerView.selectedRow(inComponent: 0)].price
         let fuelsPrice = fuels[fuelPickerView.selectedRow(inComponent: 0)].price
         
-        guard let selectCountry = Country(rawValue: segmentControl.selectedSegmentIndex) else { return }
-        switch selectCountry {
-        case .ukraine:
-            let result = Double(typesPrice + brandsPrice + productionYearsPrice + fuelsPrice) * Country.ukraine.coefficient
-            priceLabel.text = String(result)
-        case .usa:
-            let result = Double(typesPrice + brandsPrice + productionYearsPrice + fuelsPrice) * Country.usa.coefficient
-            priceLabel.text = String(result)
-        }
+        guard let selectCountry = Country(rawValue: countrySegmentControl.selectedSegmentIndex) else { return }
+        
+        let result = Double(typesPrice + brandsPrice + productionYearsPrice + fuelsPrice) * selectCountry.coefficient
+        priceLabel.text = String(result)
     }
     
     @IBAction func clearButtonPressed(_ sender: Any) {
@@ -82,9 +69,8 @@ class CalculateViewController: UIViewController {
         clear()
     }
     
-    // MARK: Public functions
-    
-    public func clear() {
+    // MARK: Private functions
+    private func clear() {
         typeTextField.text = nil
         brandTextField.text = nil
         productionYearsTextField.text = nil
@@ -93,15 +79,16 @@ class CalculateViewController: UIViewController {
         pickerViewSelectRow()
         priceLabel.text = "0.0"
     }
-    public func configureSegmentControl() {
-        segmentControl.removeAllSegments()
-        segmentControl.insertSegment(withTitle: Country.ukraine.title, at: 0, animated: false)
-        segmentControl.insertSegment(withTitle: Country.usa.title, at: 1, animated: false)
-        segmentControl.selectedSegmentIndex = 0
-        segmentControl.layer.cornerRadius = 15
+    
+    private func configureSegmentControl() {
+        countrySegmentControl.removeAllSegments()
+        countrySegmentControl.insertSegment(withTitle: Country.ukraine.title, at: 0, animated: false)
+        countrySegmentControl.insertSegment(withTitle: Country.usa.title, at: 1, animated: false)
+        countrySegmentControl.selectedSegmentIndex = 0
+        countrySegmentControl.layer.cornerRadius = 15
     }
     
-    public func configureTextFields() {
+    private func configureTextFields() {
         typePickerView.delegate = self
         typePickerView.dataSource = self
         typeTextField.inputView = typePickerView
@@ -124,19 +111,22 @@ class CalculateViewController: UIViewController {
         
         pickerSelectBy(row: 0)
     }
-    public func pickerSelectBy(row: Int) {
+    
+    private func pickerSelectBy(row: Int) {
         typeTextField.text = types[row].title
         brandTextField.text = brands[row].title
         productionYearsTextField.text = productionYears[row].rawValue
         fuelTextField.text = fuels[row].title
     }
-    public func pickerViewSelectRow() {
+    
+    private func pickerViewSelectRow() {
         let pickers = [typePickerView, brandPickerView, productionYearsPickerView, fuelPickerView]
         for picker in pickers {
             picker.selectRow(0, inComponent: 0, animated: true)
         }
     }
-    func configurePickerViewColor() {
+    
+    private func configurePickerViewColor() {
         typePickerView.backgroundColor = typeTextField.backgroundColor
         brandPickerView.backgroundColor = typeTextField.backgroundColor
         productionYearsPickerView.backgroundColor = typeTextField.backgroundColor
@@ -150,13 +140,14 @@ class CalculateViewController: UIViewController {
 }
 
 // MARK: UIPickerViewDelegate & UIPickerViewDataSource
-
 extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
         if pickerView == typeTextField.inputView {
             return types.count
         } else if pickerView == brandTextField.inputView {
@@ -170,6 +161,7 @@ extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         if pickerView == typeTextField.inputView {
             return types[row].title
         } else if pickerView == brandTextField.inputView {
@@ -183,6 +175,7 @@ extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         if pickerView == typeTextField.inputView {
             typeTextField.text = types[row].title
             typeTextField.resignFirstResponder()
@@ -199,6 +192,7 @@ extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center

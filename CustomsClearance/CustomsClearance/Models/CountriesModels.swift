@@ -8,8 +8,8 @@
 import Foundation
 
 enum Country: Int {
-    case ukraine = 0
-    case usa = 1
+    case ukraine
+    case usa
     
     var title: String {
         switch self {

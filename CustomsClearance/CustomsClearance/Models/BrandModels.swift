@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum Brand {
+enum Brand: CaseIterable {
+    case brandType
     case audi
     case bmw
     case mazda
     case mercedesBenz
     case volkswagen
-    case brandType
     
     var title: String {
         switch self {

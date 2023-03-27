@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProductionYear: String {
+enum ProductionYear: String, CaseIterable {
     case year = "Select year"
     case year2015 = "2015"
     case year2016 = "2016"

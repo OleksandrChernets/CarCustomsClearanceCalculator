@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum FuelType {
+enum FuelType: CaseIterable {
+    case fuelType
     case petrol
     case diesel
     case gas
     case electro
-    case fuelType
     
     var title: String {
         switch self {
