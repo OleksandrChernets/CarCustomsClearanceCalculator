@@ -18,7 +18,7 @@ enum Brand: CaseIterable {
     var title: String {
         switch self {
         case .brandType:
-            return "Select brand"
+            return Localizable.brand()
         case .audi:
             return "Audi"
         case .bmw:

@@ -8,7 +8,7 @@
 import Foundation
 
 enum ProductionYear: String, CaseIterable {
-    case year = "Select year"
+    case year 
     case year2015 = "2015"
     case year2016 = "2016"
     case year2017 = "2017"
@@ -18,6 +18,15 @@ enum ProductionYear: String, CaseIterable {
     case year2021 = "2021"
     case year2022 = "2022"
     case year2023 = "2023"
+    
+    var localizedText: String {
+            switch self {
+            case .year:
+                return Localizable.productYears()
+            default:
+                return rawValue
+            }
+        }
     
     var price: Int {
         switch self {

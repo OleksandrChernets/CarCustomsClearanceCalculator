@@ -1,20 +1,24 @@
 PODS:
-  - R.swift (7.3.0)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - SwiftLint (0.50.3)
 
 DEPENDENCIES:
-  - R.swift
+  - R.swift (= 6.1.0)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - R.swift
+    - R.swift.Library
     - SwiftLint
 
 SPEC CHECKSUMS:
-  R.swift: cef1c530541cb49412752721797f10dae6b32d11
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
 
-PODFILE CHECKSUM: 68eac2df62ed4ed15d7b8884ef549c3d9e251bde
+PODFILE CHECKSUM: 74d8b94750cfebb51183a951bf39f90b623c6fd0
 
 COCOAPODS: 1.11.3

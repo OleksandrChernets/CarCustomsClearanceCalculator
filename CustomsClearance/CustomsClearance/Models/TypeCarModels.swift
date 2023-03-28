@@ -17,15 +17,15 @@ enum TypeCar: CaseIterable {
     var title: String {
         switch self {
         case .type:
-            return "Select type"
+            return Localizable.typeCarType()
         case .sedan:
-            return "Sedan"
+            return Localizable.typeCarSedan()
         case .coupe:
-            return "Coupe"
+            return Localizable.typeCarCoupe()
         case .stationWagon:
-            return "Station wagon"
+            return Localizable.typyCarStationWagon()
         case .minivan:
-            return "Minivan"
+            return Localizable.typeCarMinivan()
         }
     }
     var price: Int {

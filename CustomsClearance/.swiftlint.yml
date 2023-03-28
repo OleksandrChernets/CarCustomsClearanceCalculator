@@ -19,6 +19,7 @@ analyzer_rules: # Rules run by `swiftlint analyze`
 included: # paths to include during linting. `--path` is ignored if present.
   - CustomsClearance
 excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - R.generated.swift
   - Carthage
   - Pods
   - Source/ExcludedFolder

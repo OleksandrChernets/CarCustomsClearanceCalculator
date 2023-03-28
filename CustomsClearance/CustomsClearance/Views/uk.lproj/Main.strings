@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Brand"; ObjectID = "8bU-C0-RMb"; */
+"8bU-C0-RMb.text" = "Brand";
+
+/* Class = "UILabel"; text = "Fuel"; ObjectID = "JEZ-O0-Nqy"; */
+"JEZ-O0-Nqy.text" = "Fuel";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "Pb9-ZI-CE1"; */
+"Pb9-ZI-CE1.text" = "Type";
+
+/* Class = "UIButton"; configuration.title = "Calculate"; ObjectID = "Z8D-gV-Gtp"; */
+"Z8D-gV-Gtp.configuration.title" = "Calculate";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Z8D-gV-Gtp"; */
+"Z8D-gV-Gtp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Production year"; ObjectID = "aON-ub-EeX"; */
+"aON-ub-EeX.text" = "Production year";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "ehc-iE-JBK"; */
+"ehc-iE-JBK.text" = "0.0";
+
+/* Class = "UISegmentedControl"; kSh-wa-j4z.segmentTitles[0] = "🇺🇦"; ObjectID = "kSh-wa-j4z"; */
+"kSh-wa-j4z.segmentTitles[0]" = "🇺🇦";
+
+/* Class = "UISegmentedControl"; kSh-wa-j4z.segmentTitles[1] = "🇺🇸"; ObjectID = "kSh-wa-j4z"; */
+"kSh-wa-j4z.segmentTitles[1]" = "🇺🇸";
+
+/* Class = "UIButton"; configuration.title = "Clear"; ObjectID = "mTZ-Ab-s7Y"; */
+"mTZ-Ab-s7Y.configuration.title" = "Clear";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mTZ-Ab-s7Y"; */
+"mTZ-Ab-s7Y.normalTitle" = "Button";

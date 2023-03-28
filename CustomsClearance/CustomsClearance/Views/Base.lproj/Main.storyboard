@@ -192,13 +192,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="brandLabel" destination="8bU-C0-RMb" id="HTS-dc-7sQ"/>
                         <outlet property="brandTextField" destination="rVn-VG-b3P" id="qbs-mh-0rL"/>
-                        <outlet property="calculateButton" destination="Z8D-gV-Gtp" id="Fnu-pw-N3L"/>
-                        <outlet property="clearButton" destination="mTZ-Ab-s7Y" id="tGg-FX-3wo"/>
+                        <outlet property="calculateButton" destination="Z8D-gV-Gtp" id="aEm-5O-Pq2"/>
+                        <outlet property="clearButton" destination="mTZ-Ab-s7Y" id="D7b-OV-fou"/>
                         <outlet property="countrySegmentControl" destination="kSh-wa-j4z" id="Ahk-Iq-1eA"/>
+                        <outlet property="fuelLabel" destination="JEZ-O0-Nqy" id="Wfa-oI-xlY"/>
                         <outlet property="fuelTextField" destination="05T-hu-5qL" id="kjn-8X-bSf"/>
                         <outlet property="priceLabel" destination="ehc-iE-JBK" id="Wue-qo-rBb"/>
+                        <outlet property="productionYearLabel" destination="aON-ub-EeX" id="5a8-iT-DES"/>
                         <outlet property="productionYearsTextField" destination="Wt0-8N-tB0" id="t4c-wM-WWv"/>
+                        <outlet property="typeLabel" destination="Pb9-ZI-CE1" id="Hdr-oa-0RT"/>
                         <outlet property="typeTextField" destination="HGr-GU-S3S" id="6da-OG-rzM"/>
                     </connections>
                 </viewController>

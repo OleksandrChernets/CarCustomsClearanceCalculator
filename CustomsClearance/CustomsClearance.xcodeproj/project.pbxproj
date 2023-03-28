@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E124EBA29D204B400111128 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E124EB929D204B400111128 /* R.generated.swift */; };
+		5E124EBE29D206E800111128 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E124EC029D206E800111128 /* Localizable.strings */; };
 		5E679AC329CDF87C00CC7C69 /* TypeCarModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E679AC229CDF87C00CC7C69 /* TypeCarModels.swift */; };
 		5E679AC529CDF88700CC7C69 /* BrandModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E679AC429CDF88700CC7C69 /* BrandModels.swift */; };
 		5E679AC729CDF8A500CC7C69 /* ProductionYearsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E679AC629CDF8A500CC7C69 /* ProductionYearsModels.swift */; };
@@ -18,11 +20,16 @@
 		5E7F725929C8EE8800D93F38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F725729C8EE8800D93F38 /* Main.storyboard */; };
 		5E7F725B29C8EE8B00D93F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F725A29C8EE8A00D93F38 /* Assets.xcassets */; };
 		5E7F725E29C8EE8B00D93F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F725C29C8EE8B00D93F38 /* LaunchScreen.storyboard */; };
+		5E85DDB629D202670060D2F9 /* R.Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85DDB529D202670060D2F9 /* R.Aliases.swift */; };
 		5EEC2B1A29CC7B830086726B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5EEC2B1929CC7B830086726B /* Podfile */; };
 		E838B818DDA1EDAF73859346 /* Pods_CustomsClearance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5627F8869078C4FF5056569 /* Pods_CustomsClearance.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E124EB929D204B400111128 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		5E124EBB29D206B700111128 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		5E124EBF29D206E800111128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E124EC129D206EB00111128 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E679AC229CDF87C00CC7C69 /* TypeCarModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCarModels.swift; sourceTree = "<group>"; };
 		5E679AC429CDF88700CC7C69 /* BrandModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModels.swift; sourceTree = "<group>"; };
 		5E679AC629CDF8A500CC7C69 /* ProductionYearsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionYearsModels.swift; sourceTree = "<group>"; };
@@ -36,6 +43,7 @@
 		5E7F725A29C8EE8A00D93F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7F725D29C8EE8B00D93F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7F725F29C8EE8B00D93F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E85DDB529D202670060D2F9 /* R.Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.Aliases.swift; sourceTree = "<group>"; };
 		5EEC2B1929CC7B830086726B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D44766AD491D7847545EEFB3 /* Pods-CustomsClearance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomsClearance.debug.xcconfig"; path = "Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance.debug.xcconfig"; sourceTree = "<group>"; };
 		D4CCEB0033E187864FA86360 /* Pods-CustomsClearance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomsClearance.release.xcconfig"; path = "Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +117,7 @@
 				5E679AC129CDF85E00CC7C69 /* Models */,
 				5EEC2B1C29CC7CB40086726B /* Views */,
 				5EEC2B1D29CC7CC20086726B /* Controllers */,
-				5EEC2B1E29CC7CD10086726B /* DefaultFiles */,
+				5EEC2B1E29CC7CD10086726B /* Resources */,
 			);
 			path = CustomsClearance;
 			sourceTree = "<group>";
@@ -119,6 +127,8 @@
 			children = (
 				5E7F725129C8EE8800D93F38 /* AppDelegate.swift */,
 				5E7F725329C8EE8800D93F38 /* SceneDelegate.swift */,
+				5E124EB929D204B400111128 /* R.generated.swift */,
+				5E85DDB529D202670060D2F9 /* R.Aliases.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -139,14 +149,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		5EEC2B1E29CC7CD10086726B /* DefaultFiles */ = {
+		5EEC2B1E29CC7CD10086726B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				5E7F725A29C8EE8A00D93F38 /* Assets.xcassets */,
 				5E7F725C29C8EE8B00D93F38 /* LaunchScreen.storyboard */,
 				5E7F725F29C8EE8B00D93F38 /* Info.plist */,
+				5E124EC029D206E800111128 /* Localizable.strings */,
 			);
-			path = DefaultFiles;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +169,11 @@
 			buildPhases = (
 				9C8408EED34D0DD8AB3F74E2 /* [CP] Check Pods Manifest.lock */,
 				5E7C76DE29CC851300F40AFA /* ShellScript */,
+				5E85DDB229D2020B0060D2F9 /* ShellScript */,
 				5E7F724A29C8EE8800D93F38 /* Sources */,
 				5E7F724B29C8EE8800D93F38 /* Frameworks */,
 				5E7F724C29C8EE8800D93F38 /* Resources */,
-				E23DA6B280AE29E4006AC6A3 /* [CP] Embed Pods Frameworks */,
+				4C116EBF64B413CD59BADAE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +206,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = 5E7F724529C8EE8800D93F38;
 			productRefGroup = 5E7F724F29C8EE8800D93F38 /* Products */;
@@ -210,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E124EBE29D206E800111128 /* Localizable.strings in Resources */,
 				5E7F725E29C8EE8B00D93F38 /* LaunchScreen.storyboard in Resources */,
 				5E7F725B29C8EE8B00D93F38 /* Assets.xcassets in Resources */,
 				5EEC2B1A29CC7B830086726B /* Podfile in Resources */,
@@ -220,6 +234,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4C116EBF64B413CD59BADAE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5E7C76DE29CC851300F40AFA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -237,6 +268,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		5E85DDB229D2020B0060D2F9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		9C8408EED34D0DD8AB3F74E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -260,23 +310,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E23DA6B280AE29E4006AC6A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomsClearance/Pods-CustomsClearance-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -291,6 +324,8 @@
 				5E679AC329CDF87C00CC7C69 /* TypeCarModels.swift in Sources */,
 				5E7F725229C8EE8800D93F38 /* AppDelegate.swift in Sources */,
 				5E7F725429C8EE8800D93F38 /* SceneDelegate.swift in Sources */,
+				5E124EBA29D204B400111128 /* R.generated.swift in Sources */,
+				5E85DDB629D202670060D2F9 /* R.Aliases.swift in Sources */,
 				5E679AC529CDF88700CC7C69 /* BrandModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,10 +333,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5E124EC029D206E800111128 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E124EBF29D206E800111128 /* en */,
+				5E124EC129D206EB00111128 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5E7F725729C8EE8800D93F38 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5E7F725829C8EE8800D93F38 /* Base */,
+				5E124EBB29D206B700111128 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -321,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -381,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -440,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CustomsClearance/DefaultFiles/Info.plist;
+				INFOPLIST_FILE = CustomsClearance/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -468,7 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CustomsClearance/DefaultFiles/Info.plist;
+				INFOPLIST_FILE = CustomsClearance/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

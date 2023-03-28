@@ -10,6 +10,10 @@ import UIKit
 final class CalculateViewController: UIViewController {
     
     // MARK: @IBOutlets
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var brandLabel: UILabel!
+    @IBOutlet weak var productionYearLabel: UILabel!
+    @IBOutlet weak var fuelLabel: UILabel!
     @IBOutlet weak var countrySegmentControl: UISegmentedControl!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var brandTextField: UITextField!
@@ -32,6 +36,8 @@ final class CalculateViewController: UIViewController {
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        localizeUI()
         configureTextFields()
         configureSegmentControl()
         configurePickerViewColor()
@@ -45,8 +51,8 @@ final class CalculateViewController: UIViewController {
               (productionYearsPickerView.selectedRow(inComponent: 0) != 0),
               (fuelPickerView.selectedRow(inComponent: 0) != 0)
         else {
-            let alert = UIAlertController(title: "Error", message: "Please select all fields", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert = UIAlertController(title: Localizable.alertError(), message: Localizable.alertDetail(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             return
         }
@@ -133,6 +139,14 @@ final class CalculateViewController: UIViewController {
         fuelPickerView.backgroundColor = typeTextField.backgroundColor
     }
     
+    private func localizeUI() {
+        typeLabel.text = Localizable.calculatorTypeLabel()
+        brandLabel.text = Localizable.calculatorBrandLabel()
+        productionYearLabel.text = Localizable.calculatorProductionYearLabel()
+        fuelLabel.text = Localizable.calculatorFuelLabel()
+        calculateButton.titleLabel?.text = Localizable.calculatorCalculateButton()
+        clearButton.titleLabel?.text = Localizable.calculatorClearButton()
+    }
     // Сlosing the pickerView when you click on the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)

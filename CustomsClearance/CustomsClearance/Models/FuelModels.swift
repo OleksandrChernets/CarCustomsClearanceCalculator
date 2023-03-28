@@ -17,15 +17,15 @@ enum FuelType: CaseIterable {
     var title: String {
         switch self {
         case .petrol:
-            return "Pertol"
+            return Localizable.fuelTypePetrol()
         case .diesel:
-            return "Diesel"
+            return Localizable.fuelTypeDiesel()
         case .gas:
-            return "Gas"
+            return Localizable.fuelTypeGas()
         case .electro:
-            return "Electro"
+            return Localizable.fuelTypeElectro()
         case .fuelType:
-            return "Select fuel"
+            return Localizable.fuelType()
         }
     }
     var price: Int {
