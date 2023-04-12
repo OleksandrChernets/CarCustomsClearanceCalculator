@@ -20,4 +20,4 @@
  <p align="center">
  <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
 
- <img align="left" alt="Coding" width="200" src="https://kept.com.ua/image/O4l/Запись_экрана_2023-03-25_в_12.37.09.gif">
+ <img align="left" alt="Coding" width="200" src="https://s10.gifyu.com/images/ZAPIS-EKRANA-2023-03-25-V-12.37.09.gif">
